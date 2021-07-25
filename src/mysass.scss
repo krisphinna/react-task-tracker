@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+$darkAccent: #224b4b;
+$lightAccent: #2cda9d;
+$backgroundBase: #619e9e;
+
+$shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
+$default-border: 1px solid darken($backgroundBase, 25%);
+
+body {
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    background: lighten($backgroundBase, 30%);
+    font-family: "Lora", serif;
+  }
+  
+  .AppWrap {
+    margin-top: 10px;
+    display: flex;
+    min-width: 1100px;
+  }
+  
+  .EditorWrap {
+    margin-left: 10%;
+    min-width: 400px;
+    align-self: flex-start;
+  }
+  
+  .EditorWrap .toolbar {
+    background: lighten($darkAccent, 35%);
+    width: 80%;
+    font-family: "Lora", serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: $shadow;    
+  }
+  
+  .EditorWrap #editor {
+    background-color: lighten($lightAccent, 35%);
+    width: 80%;
+    height: 75vh;
+    min-height: 520px;
+    min-width: 300px;
+    padding: 10px 15px;
+    border-style: 1px black solid;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: $default-border;
+  }
+  
+  input:focus,
+  textarea {
+    outline: none !important;
+  }
+  
+  
+  .PreviewerWrap {
+    min-width: 600px;
+  }
+  
+  .PreviewerWrap .toolbar {
+    background: lighten($darkAccent, 35%);
+    width: 80%;
+    font-family: "Lora", serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: $shadow;
+  }
+  
+  .PreviewerWrap #previewer {
+    width: 80%;
+    height: 75vh;
+    min-height: 540px;
+    background: lighten($lightAccent, 35%);
+    overflow: auto;
+    padding: 0px 15px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: $default-border;
+  }
+  
+  .title {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Lora", serif;
+    min-width: 1100px;
+  }
+
+  //marked style
+
+  #previewer {
+    padding: 0 1rem;
+  
+    blockquote {
+      border-left: 3px solid #2d7272;
+      color: #224b4b;
+      padding-left: 5px;
+      margin-left: 25px;
+    }
+  
+    > p > code {
+      padding: 3px;
+    }
+  
+    code {
+      background: white;
+      font-size: 0.875rem;
+      font-weight: bold;
+    }
+  
+    pre {
+      display: block;
+      overflow: auto;
+      background: white;
+      padding: 5px;
+      line-height: 1.2;
+    }
+  
+    h1 {
+      border-bottom: 2px solid $darkAccent;
+    }
+  
+    h2 {
+      border-bottom: 1px solid $darkAccent;
+    }
+  
+    table {
+      border-collapse: collapse;
+    }
+  
+    td,
+    th {
+      border: 2px solid lighten($darkAccent, 20%);
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 2rem auto;
+    }
+}
+
+  
+  
+  @media screen and (max-device-width: 414px), screen and (max-width: 414px) {
+    .AppWrap {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      min-width: 100px;
+    }
+  
+    .EditorWrap {
+      min-width: 100px;
+      margin-left: 17.5vw;
+      margin-top: 0px;
+    }
+  
+    .EditorWrap .toolbar {
+      width: 60vw;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+  
+    .EditorWrap #editor {
+      width: 60vw;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      min-width: 100px;
+      min-height: 200px;
+      height: 25vh;
+    }
+  
+    .PreviewerWrap {
+      margin-top: 10px;
+      margin-left: 7vw;
+    }
+  
+    .PreviewerWrap .toolbar {
+      width: 80vw;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+  
+    .PreviewerWrap #previewer {
+      width: 80vw;
+      height: 35vh;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      min-height: 300px;
+    }
+  
+    .title {
+      margin-top: 10px;
+      min-width: 100px;
+    }
+}
